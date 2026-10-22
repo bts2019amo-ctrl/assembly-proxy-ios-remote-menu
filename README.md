@@ -4,15 +4,15 @@
 
 ## Direct Download
 
-- **Full package (zip):** [Download ZIP](https://github.com/bts2019amo-ctrl/assembly-proxy-ios-remote-menu/archive/refs/heads/main.zip)
+- **Full package (zip):** [Download ZIP](https://github.com/bts2019amo-ctrl/assembly-proxy-ios-remote-menu/raw/main/ASSEMBLY_PROXY_REMOTE_MENU_READY.zip)
+- Repo archive: https://github.com/bts2019amo-ctrl/assembly-proxy-ios-remote-menu/archive/refs/heads/main.zip
 - Or clone: `git clone https://github.com/bts2019amo-ctrl/assembly-proxy-ios-remote-menu.git`
 
-## O que é
-- Proxy mitm que injeta `assembly-csharp-patch` custom (74 IFix)
-- **Remote Menu** no navegador (porta 8080) com:
-  - ESP · Aimbot · Arm · Team ESP · Crosshair
-  - Jump Air / Control / Toggle · C-Arm · C-T1
-- Controle remoto das opções via site + API
+## Status (resolvido)
+- Assembly custom (74 IFix) servido pelo proxy na porta 7777
+- Remote Menu web na porta 8080 com todos os toggles
+- Estado sincronizado em remote_state.json + localConfig.json
+- Features (ESP, Aimbot, etc.) existem no patch
 
 ## Como rodar
 ```bash
@@ -29,13 +29,9 @@ ou `RUN_WINDOWS.bat`
 - `GET  /api/config`
 - `POST /api/toggle`  body: `{"key":"esp","value":true}`
 
-## Files
-- `payload/` → assembly pronto (baixe o zip completo ou rode `build_assembly.py`)
-- `source/` → original + BASE
-- `run.py` → sobe tudo
-- `assembly_proxy.py` → mitm + lógica
-
-**Nota:** Features do BASE (`m_esp`, `m_aim` etc) já estão no assembly. O painel remoto controla o estado.
+## Observação
+O assembly chega no jogo. O painel remoto controla o estado salvo.
+Controle 100% live (jogo ler o site no meio da partida) ainda requer IFix de poll adicional.
 
 ---
 Layla · @@prudenciodev
